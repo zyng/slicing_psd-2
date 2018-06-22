@@ -19,13 +19,19 @@ $(document).ready(function () {
         if (menuContent.style.display === "block") {
             menuContent.style.display = "none";
             hamburgerIcon.src = "img/hamburger-close.png";
-            slider.style.display = "block";
             pageMenu.style.height = "auto";
+
+            if (slider) {
+                slider.style.display = "block";
+            }
         } else {
             menuContent.style.display = "block";
             hamburgerIcon.src = "img/hamburger-open.png";
-            slider.style.display = "none";
             pageMenu.style.height = "100%";
+
+            if (slider) {
+                slider.style.display = "none";
+            }
         }
 
     });

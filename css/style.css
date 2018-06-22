@@ -109,9 +109,8 @@ img {
     right: 0;
     z-index: 3;
     width: 374px;
-    height: 100%;
-
-     display: -webkit-flex;
+    height: auto;
+    display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flex;
     display: -o-flex;
@@ -233,6 +232,7 @@ img {
 }
 
 .container-slider {
+    display: block;
     position: absolute;
     right: 0;
     bottom: 50px;
@@ -377,10 +377,6 @@ img {
     margin-right: 60px;
 }
 
-
-
-
-
 .container-content .row .col-6 img {
     width: 60%;
 }
@@ -435,7 +431,6 @@ img {
     margin: 0 auto;
 }
 
-
 .page-search .container-search input {
     border: none;
     border-bottom: 2px solid rgba(0,0,0,0.4);
@@ -475,7 +470,6 @@ img {
     width: 60%;
     margin: 100px auto;
     height: 160px;
-
 }
 
 .page-search .container-ad .ad {
