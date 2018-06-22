@@ -33,3 +33,15 @@ $(document).ready(function () {
 });
 
 
+$(document).ready(function () {
+    'use strict';
+
+    var closeButton = document.querySelector('.search-input-container'),
+        input = document.getElementById('search-input');
+
+
+    closeButton.addEventListener('click', function () {
+        input.value = '';
+    });
+
+});
