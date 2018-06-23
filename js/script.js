@@ -43,16 +43,28 @@ $(document).ready(function () {
 $(document).ready(function () {
     'use strict';
 
-    var closeButton = document.querySelector('.search-input-container'),
+    var closeButton = document.getElementById('close-btn'),
         input = document.getElementById('search-input');
 
 
-    if (closeButton) {
-
-        closeButton = closeButton.getElementsByTagName('img')[0];
+    if (closeButton && input) {
 
         closeButton.addEventListener('click', function () {
             input.value = '';
+            closeButton.style.display = "none";
         });
+
+
+        input.addEventListener('keyup', function () {
+            closeButton.style.display = "block";
+
+            if (this.value.length === 0) {
+                closeButton.style.display = "none";
+            }
+        });
+
+
     }
 });
+
+

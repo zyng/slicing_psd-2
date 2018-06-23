@@ -457,6 +457,7 @@ img {
 }
 
 .page-search .container-search img {
+    display: none;
     position: absolute;
     right: 0;
     bottom: 100px;
@@ -507,6 +508,7 @@ img {
     text-transform: uppercase;
 }
 
+/* MEDIA QUERIES  1473 PX-----------------------------------------------------------------------------------*/
 @media (max-width: 1473px) {
      .container-header .header-bg-text {
         top: 150px;
