@@ -20,6 +20,7 @@ $(document).ready(function () {
             menuContent.style.display = "none";
             hamburgerIcon.src = "img/hamburger-close.png";
             pageMenu.style.height = "auto";
+            pageMenu.style.position = "absolute";
 
             if (slider) {
                 slider.style.display = "block";
@@ -28,12 +29,12 @@ $(document).ready(function () {
             menuContent.style.display = "block";
             hamburgerIcon.src = "img/hamburger-open.png";
             pageMenu.style.height = "100%";
+            pageMenu.style.position = "fixed";
 
             if (slider) {
                 slider.style.display = "none";
             }
         }
-
     });
 
 });
@@ -46,8 +47,12 @@ $(document).ready(function () {
         input = document.getElementById('search-input');
 
 
-    closeButton.addEventListener('click', function () {
-        input.value = '';
-    });
+    if (closeButton) {
 
+        closeButton = closeButton.getElementsByTagName('img')[0];
+
+        closeButton.addEventListener('click', function () {
+            input.value = '';
+        });
+    }
 });
