@@ -128,11 +128,17 @@ img {
     border-radius: 100%;
     text-align: center;
     cursor:pointer;
+    position: relative;
 }
 
 .page-menu .menu-toggle img {
-    position:relative;
-    top:34px;
+    position:absolute;
+    left: 0;
+    right: 0;
+    top:0;
+    bottom: 0;
+    margin: auto;
+
 }
 
 .container-menu {
@@ -735,11 +741,6 @@ img {
         width: 70px;
         height: 70px;
     }
-
-    .page-menu .menu-toggle img {
-        top:28px;
-    }
-
     .container-menu .categories {
         margin-bottom: 30px;
         margin-right: 10px;
