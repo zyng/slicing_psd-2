@@ -9,7 +9,9 @@ $(document).ready(function () {
         menuContent = document.querySelector('.container-menu'),
         pageMenu = document.querySelector('.page-menu'),
         hamburgerIcon = document.getElementById('hamburger-icon'),
-        slider = document.querySelector('.container-slider');
+        slider = document.querySelector('.container-slider'),
+        btnAllCategories = document.querySelector('.all-categories');
+
 
 
     hamburger.addEventListener('click', function () {
@@ -18,6 +20,7 @@ $(document).ready(function () {
 
         if (menuContent.style.display === "block") {
             menuContent.style.display = "none";
+            btnAllCategories.style.display = "none";
             hamburgerIcon.src = "img/hamburger-close.png";
             pageMenu.style.height = "auto";
             pageMenu.style.position = "absolute";
@@ -27,6 +30,7 @@ $(document).ready(function () {
             }
         } else {
             menuContent.style.display = "block";
+            btnAllCategories.style.display = "block";
             hamburgerIcon.src = "img/hamburger-open.png";
             pageMenu.style.height = "100%";
             pageMenu.style.position = "fixed";
