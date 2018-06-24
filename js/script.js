@@ -1,5 +1,5 @@
 /*jslint browser: true*/
-/*global $, document*/
+/*global $, document */
 
 
 $(document).ready(function () {
@@ -14,11 +14,14 @@ $(document).ready(function () {
 
 
 
-    hamburger.addEventListener('click', function () {
 
+    hamburger.addEventListener('click', function () {
         pageMenu.classList.toggle('shadow-box');
 
+
+
         if (menuContent.style.display === "block") {
+            pageMenu.style.width = "0";
             menuContent.style.display = "none";
             btnAllCategories.style.display = "none";
             hamburgerIcon.src = "img/hamburger-close.png";
@@ -29,8 +32,17 @@ $(document).ready(function () {
                 slider.style.display = "block";
             }
         } else {
-            menuContent.style.display = "block";
-            btnAllCategories.style.display = "block";
+
+            if ($(document).width() > 671) {
+                $('.page-menu').stop().animate({width: '374px'}, {duration: 800});
+            } else {
+                $('.page-menu').stop().animate({width: '50%'}, {duration: 800});
+            }
+
+
+            $('.container-menu').stop().fadeIn(2000);
+            $('.all-categories').stop().fadeIn(2000);
+
             hamburgerIcon.src = "img/hamburger-open.png";
             pageMenu.style.height = "100%";
             pageMenu.style.position = "fixed";

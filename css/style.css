@@ -108,7 +108,7 @@ img {
     top: 0;
     right: 0;
     z-index: 3;
-    width: 374px;
+    width: 0;
     height: auto;
     display: -webkit-flex;
     display: -moz-flex;
@@ -531,9 +531,6 @@ img {
 
 /* MEDIA QUERIES  1366 PX-----------------------------------------------------------------------------------*/
 @media (max-width: 1366px) {
-    .page-products {
-
-    }
     .menu-toggle {
         height: 87px;
     }
@@ -730,10 +727,6 @@ img {
         position: absolute;
         bottom:15px;
         right: 20px;
-    }
-
-    .page-menu {
-        width: 50%;
     }
 
     .page-menu .menu-toggle {
